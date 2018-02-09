@@ -1,3 +1,3 @@
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+pfrx_platform:
+    resource: "@PFRXPlatformBundle/Resources/config/routing.yml"
+    prefix:   /
