@@ -1,3 +1,35 @@
-hello_the_world:
-    path:     /hello-world
-    defaults: { _controller: PFRXPlatformBundle:Advert:index }
+# src/PFRX/PlatformBundle/Resources/config/routing.yml
+
+pfrx_platform_home:
+    path:      /{page}
+    defaults: 
+      _controller: PFRXPlatformBundle:Advert:index
+      page: 1
+    requirements: 
+      page: \d*
+    
+pfrx_platform_view:
+    path:      /advert/{id}
+    defaults:  
+      _controller: PFRXPlatformBundle:Advert:view 
+    requirements: 
+      id: \d+ #pour dire que c'est un chiffre que l'on veut
+    
+pfrx_platform_add:
+    path:      /add
+    defaults:  
+      _controller: PFRXPlatformBundle:Advert:add
+
+pfrx_platform_edit:
+    path:      /edit/{id}
+    defaults:
+        _controller: PFRXPlatformBundle:Advert:edit
+    requirements:
+        id: \d+
+
+pfrx_platform_delete:
+    path:      /delete/{id}
+    defaults:
+        _controller: PFRXPlatformBundle:Advert:delete
+    requirements:
+        id: \d+

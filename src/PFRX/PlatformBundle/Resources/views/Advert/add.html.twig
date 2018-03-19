@@ -1,0 +1,19 @@
+{# src/PFRX/PlatformBundle/Resources/views/Advert/add.html.twig #}
+
+{% extends "PFRXPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Ajouter une annonce - {{ parent() }}
+{% endblock %}
+
+{% block pfrxplatform_body %}
+
+  <h2>Ajouter une annonce</h2>
+
+  {{ include("PFRXPlatformBundle:Advert:form.html.twig") }}
+
+  <p>
+    Vous ajouterez une annonce au site. Merci de respecter la charte.
+  </p>
+
+{% endblock %}
